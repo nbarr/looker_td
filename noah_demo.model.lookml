@@ -13,10 +13,25 @@
     relationship: many_to_one
     
 - explore: sfdc_opportunity_historic
+  joins:
+  - join: sfdc_user
+    sql_on: ${sfdc_opportunity_historic.ownerid} = ${sfdc_user.id}
+    type: left_outer
+    relationship: many_to_one
 
 - explore: sfdc_account
+  joins:
+  - join: sfdc_user
+    sql_on: ${sfdc_account.ownerid} = ${sfdc_user.id}
+    type: left_outer
+    relationship: many_to_one
 
 - explore: sfdc_contact
+  joins:
+  - join: sfdc_user
+    sql_on: ${sfdc_contact.ownerid} = ${sfdc_user.id}
+    type: left_outer
+    relationship: many_to_one
 
 - explore: sfdc_task
 
