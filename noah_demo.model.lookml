@@ -33,6 +33,8 @@
     type: left_outer
     relationship: many_to_one
 
+
+
 - explore: sfdc_task
 
 - explore: sfdc_user
