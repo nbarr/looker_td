@@ -32,7 +32,10 @@
     sql_on: ${sfdc_contact.ownerid} = ${sfdc_user.id}
     type: left_outer
     relationship: many_to_one
-
+  - join: sfdc_account
+    sql_on: ${sfdc_contact.accountid} = ${sfdc_account.id}
+    type: left_outer
+    relationship: many_to_one
 
 
 - explore: sfdc_task
