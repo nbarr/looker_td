@@ -14,6 +14,10 @@
     
 - explore: sfdc_opportunity_historic
 
+- explore: sfdc_account
+
+- explore: sfdc_contact
+
 - explore: sfdc_task
 
 - explore: sfdc_user
