@@ -11,6 +11,11 @@
     sql_on: ${sfdc_opportunity.ownerid} = ${sfdc_user.id}
     type: left_outer
     relationship: many_to_one
+  - join: sfdc_account
+    sql_on: ${sfdc_opportunity.accountid} = ${sfdc_account.id}
+    type: left_outer
+    relationship: many_to_one
+
     
 - explore: sfdc_opportunity_historic
   joins:
