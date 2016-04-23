@@ -62,7 +62,7 @@
     type: time
     sql: substr(${TABLE}.closedate,1,10)::timestamp
     convert_tz: false
-    timeframes: [date, quarter]
+    timeframes: [date, month, quarter]
 
   - dimension: collection_rate_row_month__c
     type: string
@@ -92,9 +92,17 @@
     type: string
     sql: ${TABLE}.createdbyid
 
+#  - dimension: createddate
+#    type: time
+#    sql: ${TABLE}.createddate
+
   - dimension: createddate
-    type: string
-    sql: ${TABLE}.createddate
+    type: time
+    sql: substr(${TABLE}.createddate,1,10)::timestamp
+    convert_tz: false
+    timeframes: [date, month, quarter]
+    
+
 
   - dimension: deal_type__c
     type: string
